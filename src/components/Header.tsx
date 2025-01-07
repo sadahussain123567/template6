@@ -73,25 +73,41 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-12 left-0 w-full  bg-white shadow-lg sm:hidden">
+        <div className="absolute top-12 left-0 w-full bg-white shadow-lg sm:hidden">
           <ul className="flex flex-col items-start gap-4 p-4 text-black">
             <li>
-              <Link href="/" className="font-popins font-medium">
+              <Link
+                href="/"
+                className="font-popins font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/shop" className="font-popins font-medium">
+              <Link
+                href="/shop"
+                className="font-popins font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Shop
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="font-popins font-medium">
+              <Link
+                href="/blog"
+                className="font-popins font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="font-popins font-medium">
+              <Link
+                href="/contact"
+                className="font-popins font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Contact
               </Link>
             </li>
