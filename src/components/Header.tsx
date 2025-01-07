@@ -78,7 +78,7 @@ const Header = () => {
             <li>
               <Link
                 href="/"
-                className="font-popins font-medium"
+                className="font-popins text-2xl font-black"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
