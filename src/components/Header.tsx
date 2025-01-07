@@ -87,7 +87,7 @@ const Header = () => {
             <li>
               <Link
                 href="/shop"
-                className="font-popins font-medium"
+                className="font-popins text-2xl font-black"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Shop
@@ -96,7 +96,7 @@ const Header = () => {
             <li>
               <Link
                 href="/blog"
-                className="font-popins font-medium"
+                className="font-popins text-2xl font-black"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
@@ -105,7 +105,7 @@ const Header = () => {
             <li>
               <Link
                 href="/contact"
-                className="font-popins font-medium"
+                className="font-popins text-2xl font-black"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
