@@ -81,7 +81,7 @@ export default function Hero() {
           Our Product{" "}
         </h3>
         <br />
-        <div className=" sm:flex sm:pb-14 sm:gap-2 grid  place-content-center pb-7 gap-1">
+        <div className=" sm:flex sm:pb-14 sm:gap-2 grid grid-cols-2  place-content-center pb-7 gap-1">
           <div className="relative group">
             <Image src={image4} alt="image" className="w-full h-auto" />
 
