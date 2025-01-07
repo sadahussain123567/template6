@@ -178,7 +178,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="sm:pb-14 sm:gap-2 grid place-content-center sm:flex  pb-7 gap-1">
+        <div className="sm:pb-14 sm:gap-2 grid grid-cols-2  place-content-center sm:flex  pb-7 gap-1">
           <div className="relative group">
             <div className="absolute top-3 left-3 bg-green-500 text-white text-sm font-bold py-1 px-2 rounded-full">
               New
