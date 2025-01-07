@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div className="flex fixed top-0 left-0 w-full h-12 sm:h-24 z-50 bg-white">
-      <nav className="gap-40 sm:gap-8 md:gap-14 lg:gap-56 xl:gap-64 2xl:gap-20 pt-2 flex items-center  w-full px-4">
+      <nav className="justify-between pt-2 flex items-center  w-full px-4">
         <div className=" flex items-center gap-2 justify-center sm:justify-start">
           <Image
             src={photo}
