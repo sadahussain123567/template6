@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import ProductCard from "./Productcard";
 import Image from "next/image";
 import image from "../../public/image 100.png";
 import image2 from "../../public/image 101.png";
@@ -82,199 +84,88 @@ export default function Hero() {
         </h3>
         <br />
         <div className=" sm:flex sm:pb-14 sm:gap-2 grid grid-cols-2  place-content-center pb-7 gap-1">
-          <div className="relative group">
-            <Image src={image4} alt="image" className="w-full h-auto" />
-
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <button className="bg-white text-black font-medium py-2 px-4 rounded shadow-lg">
-                Add to cart
-              </button>
-              <div className="flex space-x-4 mt-4 text-white">
-                <button className="hover:text-gray-300">Share</button>
-                <button className="hover:text-gray-300">Compare</button>
-                <button className="hover:text-gray-300">Like</button>
-              </div>
-            </div>
-
-            <div className="mt-4 text-">
-              <h4 className="font-semibold text-lg sm:text-2xl">Syltherine</h4>
-              <p>Stylish Cafe Chair</p>
-              <h4 className="font-semibold text-lg sm:text-2xl">
-                Rp 2.500.000
-              </h4>
-            </div>
-          </div>
-          <div className="relative group">
-            <div className="absolute top-3 left-3 bg-green-500 text-white text-sm font-bold py-1 px-2 rounded-full">
-              New
-            </div>
-            <Image src={image5} alt="image" className="w-full h-auto" />
-
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <button className="bg-white text-black font-medium py-2 px-4 rounded shadow-lg">
-                Add to cart
-              </button>
-              <div className="flex space-x-4 mt-4 text-white">
-                <button className="hover:text-gray-300">Share</button>
-                <button className="hover:text-gray-300">Compare</button>
-                <button className="hover:text-gray-300">Like</button>
-              </div>
-            </div>
-
-            <div className="mt-4 text-">
-              <h4 className="font-semibold text-lg sm:text-2xl">Leviosa</h4>
-              <p>Stylish Cafe Chair</p>
-              <h4 className="font-semibold text-lg sm:text-2xl">
-                Rp 2.500.000
-              </h4>
-            </div>
-          </div>
-          <div className="relative group">
-            <div className="absolute top-3 left-3 bg-red-500 text-white text-sm font-bold py-1 px-2 rounded-full">
-              -50%
-            </div>
-            <Image src={image6} alt="image" className="w-full h-auto" />
-
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <button className="bg-white text-black font-medium py-2 px-4 rounded shadow-lg">
-                Add to cart
-              </button>
-              <div className="flex space-x-4 mt-4 text-white">
-                <button className="hover:text-gray-300">Share</button>
-                <button className="hover:text-gray-300">Compare</button>
-                <button className="hover:text-gray-300">Like</button>
-              </div>
-            </div>
-
-            <div className="mt-4 text-">
-              <h4 className="font-semibold text-lg sm:text-2xl">Lolito</h4>
-              <p>Luxury big sofa</p>
-              <h4 className="font-semibold text-lg sm:text-2xl">
-                Rp 7.000.000
-              </h4>
-            </div>
-          </div>
-          <div className="relative group">
-            <div className="absolute top-3 left-3 bg-green-500 text-white text-sm font-bold py-1 px-2 rounded-full">
-              New
-            </div>
-            <Image src={image7} alt="image" className="w-full h-auto" />
-
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <button className="bg-white text-black font-medium py-2 px-4 rounded shadow-lg">
-                Add to cart
-              </button>
-              <div className="flex space-x-4 mt-4 text-white">
-                <button className="hover:text-gray-300">Share</button>
-                <button className="hover:text-gray-300">Compare</button>
-                <button className="hover:text-gray-300">Like</button>
-              </div>
-            </div>
-
-            <div className="mt-4 text-">
-              <h4 className="font-semibold text-lg sm:text-2xl">Respira</h4>
-              <p>Outdoor bar table</p>
-              <h4 className="font-semibold text-lg sm:text-2xl">Rp 500.000</h4>
-            </div>
-          </div>
+          <ProductCard
+            bgcolor="bg-green-500"
+            percent="New"
+            imageSrc={image4}
+            altText="Stylish Cafe Chair"
+            title="Syltherine"
+            description="Stylish Cafe Chair"
+            price="Rp 2.500.000"
+            onAddToCart={() => alert("Added to cart!")}
+          />
+          <ProductCard
+            bgcolor="bg-red-500"
+            percent="70%"
+            imageSrc={image5}
+            altText="Stylish Cafe Chair"
+            title="Leviosa"
+            description="Stylish Cafe Chair"
+            price="Rp 2.500.000"
+            onAddToCart={() => alert("Added to cart!")}
+          />
+          <ProductCard
+            bgcolor="bg-pink-500"
+            percent="50%"
+            imageSrc={image6}
+            altText="Stylish Cafe Chair"
+            title="Lolito"
+            description="Luxury big sofa"
+            price="Rp 7.500.00"
+            onAddToCart={() => alert("Added to cart!")}
+          />
+          <ProductCard
+            bgcolor="bg-yellow-500"
+            percent="90%"
+            imageSrc={image7}
+            altText="Stylish Cafe Chair"
+            title="Respira"
+            description="Outdoor bar table"
+            price="Rp 500.000"
+            onAddToCart={() => alert("Added to cart!")}
+          />
         </div>
-        <div className="sm:pb-14 sm:gap-2 grid grid-cols-2  place-content-center sm:flex  pb-7 gap-1">
-          <div className="relative group">
-            <div className="absolute top-3 left-3 bg-green-500 text-white text-sm font-bold py-1 px-2 rounded-full">
-              New
-            </div>
-            <Image src={image8} alt="image" className="w-full h-auto" />
-
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <button className="bg-white text-black font-medium py-2 px-4 rounded shadow-lg">
-                Add to cart
-              </button>
-              <div className="flex space-x-4 mt-4 text-white">
-                <button className="hover:text-gray-300">Share</button>
-                <button className="hover:text-gray-300">Compare</button>
-                <button className="hover:text-gray-300">Like</button>
-              </div>
-            </div>
-
-            <div className="mt-4 text-">
-              <h4 className="font-semibold text-lg sm:text-2xl">Grifo</h4>
-              <p>Night lamp</p>
-              <h4 className="font-semibold text-lg sm:text-2xl">
-                Rp 1.500.000
-              </h4>
-            </div>
-          </div>
-          <div className="relative group">
-            <div className="absolute top-3 left-3 bg-green-500 text-white text-sm font-bold py-1 px-2 rounded-full">
-              New
-            </div>
-            <Image src={image9} alt="image" className="w-full h-auto" />
-
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <button className="bg-white text-black font-medium py-2 px-4 rounded shadow-lg">
-                <Link href="/shop">Add to cart</Link>
-              </button>
-              <div className="flex space-x-4 mt-4 text-white">
-                <button className="hover:text-gray-300">Share</button>
-                <button className="hover:text-gray-300">Compare</button>
-                <button className="hover:text-gray-300">Like</button>
-              </div>
-            </div>
-
-            <div className="mt-4 text-">
-              <h4 className="font-semibold text-lg sm:text-2xl">Muggo</h4>
-              <p>Small mug</p>
-              <h4 className="font-semibold text-lg sm:text-2xl">Rp 150.000</h4>
-            </div>
-          </div>
-          <div className="relative group">
-            <div className="absolute top-3 left-3 bg-green-500 text-white text-sm font-bold py-1 px-2 rounded-full">
-              New
-            </div>
-            <Image src={image10} alt="image" className="w-full h-auto" />
-
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <button className="bg-white text-black font-medium py-2 px-4 rounded shadow-lg">
-                Add to cart
-              </button>
-              <div className="flex space-x-4 mt-4 text-white">
-                <button className="hover:text-gray-300">Share</button>
-                <button className="hover:text-gray-300">Compare</button>
-                <button className="hover:text-gray-300">Like</button>
-              </div>
-            </div>
-
-            <div className="mt-4 text-">
-              <h4 className="font-semibold text-lg sm:text-2xl">Pingky</h4>
-              <p>Oute bed set</p>
-              <h4 className="font-semibold text-lg sm:text-2xl">
-                Rp 7.000.000
-              </h4>
-            </div>
-          </div>
-          <div className="relative group">
-            <div className="absolute top-3 left-3 bg-green-500 text-white text-sm font-bold py-1 px-2 rounded-full">
-              New
-            </div>
-            <Image src={image11} alt="image" className="w-full h-auto" />
-
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <button className="bg-white text-black font-medium py-2 px-4 rounded shadow-lg">
-                Add to cart
-              </button>
-              <div className="flex space-x-4 mt-4 text-white">
-                <button className="hover:text-gray-300">Share</button>
-                <button className="hover:text-gray-300">Compare</button>
-                <button className="hover:text-gray-300">Like</button>
-              </div>
-            </div>
-
-            <div className="mt-4 text-">
-              <h4 className="font-semibold text-lg sm:text-2xl">Potty</h4>
-              <p>Minimalist Flower Pot</p>
-              <h4 className="font-semibold text-lg sm:text-2xl">Rp 500.000</h4>
-            </div>
-          </div>
+        <div className=" sm:flex sm:pb-14 sm:gap-2 grid grid-cols-2  place-content-center pb-7 gap-1">
+          <ProductCard
+            bgcolor="bg-yellow-500"
+            percent="90%"
+            imageSrc={image8}
+            altText="Stylish Cafe Chair"
+            title="Syltherine"
+            description="Stylish Cafe Chair"
+            price="Rp 2.500.000"
+            onAddToCart={() => alert("Added to cart!")}
+          />
+          <ProductCard
+            bgcolor="bg-pink-500"
+            percent="50%"
+            imageSrc={image9}
+            altText="Stylish Cafe Chair"
+            title="Leviosa"
+            description="Stylish Cafe Chair"
+            price="Rp 2.500.000"
+            onAddToCart={() => alert("Added to cart!")}
+          />
+          <ProductCard
+            bgcolor="bg-red-500"
+            percent="70%"
+            imageSrc={image10}
+            altText="Stylish Cafe Chair"
+            title="Lolito"
+            description="Luxury big sofa"
+            price="Rp 7.500.00"
+            onAddToCart={() => alert("Added to cart!")}
+          />
+          <ProductCard
+            bgcolor="bg-green-500"
+            percent="New"
+            imageSrc={image11}
+            altText="Stylish Cafe Chair"
+            title="Respira"
+            description="Outdoor bar table"
+            price="Rp 500.000"
+            onAddToCart={() => alert("Added to cart!")}
+          />
         </div>
 
         <div className=" flex justify-center items-center">
